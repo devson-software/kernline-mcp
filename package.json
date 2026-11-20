@@ -1,0 +1,54 @@
+{
+  "name": "@kernline/mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.devson-software/kernline-mcp",
+  "private": false,
+  "type": "module",
+  "description": "Local MCP server that lets Cursor and Claude Desktop read the Kernline extension tab.",
+  "license": "MIT",
+  "author": "Devson Software (Pty) Ltd <support@kernline.dev>",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "kernline-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "ws": "^8.18.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/ws": "^8.18.1",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.8.2"
+  },
+  "homepage": "https://kernline.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devson-software/kernline-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "kernline",
+    "css",
+    "tailwind",
+    "cursor",
+    "claude"
+  ]
+}

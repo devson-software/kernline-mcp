@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.devson-software/kernline-mcp",
+  "title": "Kernline",
+  "description": "Read CSS, Tailwind, and design tokens from the Kernline tab.",
+  "websiteUrl": "https://kernline.dev",
+  "repository": {
+    "url": "https://github.com/devson-software/kernline-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@kernline/mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "KERNLINE_BRIDGE_TOKEN",
+          "description": "Pairing token from Kernline settings.",
+          "format": "string",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "KERNLINE_BRIDGE_PORT",
+          "description": "Local bridge port. Defaults to 47321.",
+          "format": "string",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
